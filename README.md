@@ -11,3 +11,9 @@ This project provides an R script to identify 20 nt guide RNAs upstream of NGG P
 ```sh
 Rscript -e "if (!requireNamespace('BiocManager', quietly=TRUE)) install.packages('BiocManager'); BiocManager::install(c('Biostrings'))"
 R -e "install.packages('dplyr')"
+
+**## Usage**
+# Make sure you are in the project root directory
+Rscript scripts/design_guides.R \
+  --fasta data/example_target.fasta \
+  --out output/guides.csv
